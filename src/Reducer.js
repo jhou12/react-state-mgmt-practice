@@ -1,4 +1,6 @@
 const Reducer = (state, action) => {
+    // function that takes in old state and action, and returns new state
+    console.log('🏠 REDUCER RUN')
     switch (action.type) {
         case 'SET_POSTS':
             return {
@@ -15,7 +17,7 @@ const Reducer = (state, action) => {
                 ...state,
                 posts: state.posts.filter(post => post.id !== action.payload)
             };
-        default: 
+        default:
             return state;
     }
 };
